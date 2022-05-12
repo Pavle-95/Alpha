@@ -70,6 +70,7 @@
 }
 .logo{
     z-index: 10;
+    margin-left: 20px;
 }
 .topNav .logo img{
     transform: scale(1.5);
@@ -81,7 +82,7 @@
 }
 .search a{
     margin-left: 35px;
-    padding: 15px 10px;
+    padding: 10px 10px;
     border: 2px solid transparent;
 }
 .search a:hover{
@@ -109,6 +110,9 @@
 }
 .search i{
     object-fit: cover;
+}
+.search i:hover{
+    cursor: pointer;
 }
 .search input{
     margin-right: -25px;
@@ -375,6 +379,7 @@ footer section div p{
     font-size: 15px;
     font-family: var(--fontP);
     margin: 15px 0px 15px 0px;
+    transition: var(--transition);
 }
 footer section div h5{
     font-size: 15px;
@@ -390,7 +395,9 @@ footer section div h4{
 }
 footer section div p:hover{
     cursor: pointer;
+    transform: scale(1.1);
     color: #73C3F4;
+    transition: var(--transition);
 }
 footer section div h2{
     font-size: 20px;
@@ -403,12 +410,17 @@ footer section div i{
 }
 footer section div span i{
     margin: 0px 10px 0px 0px;
-    padding: 7px;
+    padding: 10px;
     border-radius: 50%;
     background-color: #DD71C6;
     color: white;
 }
-
+footer section div span i:hover{
+    transform: rotate(360deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+/******************************************Responsive *************************************/
 @media (max-width: 1440px){
     .container{
         width: 85%;
@@ -418,7 +430,7 @@ footer section div span i{
     }
     .nav ul li{
         flex: 0 0 20%;
-        margin-right: 20px;
+        margin: 0px 20px 15px 0px;
     }
     .hero{
         height: 67vh;
@@ -496,7 +508,7 @@ footer section div span i{
     .subscribe input{
         padding: 13px 150px 12px 21px;
     }
-    .footer section {
+    footer section {
         flex-wrap: wrap;
         flex: 0 0 33%;
     }
